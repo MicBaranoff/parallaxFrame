@@ -1,0 +1,80 @@
+// out: ../css/style.css
+
+@dark: #1d1d1d;
+
+html, body  {
+    margin: 0;
+    padding: 0;
+    font-family: "Tahoma";
+}
+
+h1, h2, h3, h4, h5, h6, ul, li, a, span, div, input, textarea, p {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-weight: normal;
+    font-family: "Tahoma";
+    font-weight: 400;
+}
+* {
+    outline: none;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.fixed-header {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    overflow: hidden;
+
+    .bg {
+        transform: scale(2);
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0.4;
+        background-image: url(../img/head-bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .content {
+        position: relative;
+        height: 100%;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .title {
+            font-size: 45px;
+            font-weight: bold;
+            color: #fff;
+        }
+    }
+}
+.page-content {
+    min-height: 100vh;
+    background-color: #fff;
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 200vh;
+    position: relative;
+    z-index: 10;
+
+    p {
+        line-height: 170%;
+    }
+}
